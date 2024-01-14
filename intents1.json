@@ -1,0 +1,32 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hello", "Hi", "Hey", "Greetings", "Good day", "Howdy"],
+      "responses": ["Hello! How can I help you?", "Hi there! What can I do for you?", "Hey! What's up?", "Greetings! How can I assist you today?"]
+    },
+    {
+      "tag": "howareyou",
+      "patterns": ["How are you?", "How are you doing?", "What's up?", "How's it going?"],
+      "responses": ["I'm doing well, thank you!", "I'm good, thanks for asking.", "Everything is fine. How about you?", "Not bad! What about you?"]
+    },
+    {
+      "tag": "goodmorning",
+      "patterns": ["Good morning", "Morning", "Hello morning"],
+      "responses": ["Good morning! How can I assist you today?", "Morning! What can I do for you?", "Hello! How's your morning going?"],
+      "context_set": "morning"
+    },
+    {
+      "tag": "goodnight",
+      "patterns": ["Good night", "Night", "Sweet dreams"],
+      "responses": ["Good night! Sleep well.", "Night! Sweet dreams.", "Sweet dreams! If you have any questions, feel free to ask tomorrow."],
+      "context_set": "night"
+    },
+    {
+      "tag": "askaboutday",
+      "patterns": ["How's your day?", "Tell me about your day", "What's going on today?"],
+      "responses": ["My day is going well! How can I assist you?", "Not much happening today. How can I help you?", "Just another day. What can I do for you?"],
+      "context_filter": ["morning"]
+    }
+  ]
+}
